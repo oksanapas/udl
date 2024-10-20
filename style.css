@@ -1,0 +1,20 @@
+body {font-family:Segoe UI}
+.eng{background-color:#078743;color:white;}
+.eng1{background-color:#addabe;}
+.exp{background-color:#6f5094;color:white;}
+.exp1{background-color:#cabfd9;}
+.act{background-color:#037db8;color:white;}
+.act1{background-color:#a8def3;}
+table, th, td { border: 5px solid white; margin:10px;}
+td{vertical-align: top; padding:10px; }
+.rot {  -ms-writing-mode: tb-rl;  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;  transform: rotate(180deg);
+  white-space: nowrap; text-align: center;}
+h1,h3{text-align: center;}
+a {
+  color: black;
+}
+p {padding:20px; }
+.topic{
+	border: 0px solid black; margin:10px;padding:20px; border-radius:20px}
+}
