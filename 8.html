@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Універсальний дизайн для навчання</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: rgb(245, 250, 247);
+    }
+    .subtitle {
+      cursor: pointer;
+      background-color: rgb(173, 218, 190);
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+.subtitle-header {
+  background-color: rgb(173, 218, 190); /* Основний колір */
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+    .subtitle-header:hover {
+      background-color: rgb(155, 200, 175);
+    }
+.subtitle-subtext {
+  background-color: rgb(245, 250, 252); /* Світле тло */
+  padding: 8px 10px;
+  font-style: italic;
+  color: #2C3E50;
+border-radius: 5px;
+}
+    .explanation {
+      display: none;
+      margin: 10px 0 20px 20px;
+      padding: 10px;
+      background-color: #ffffff;
+      border-left: 4px solid rgb(122, 186, 155);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .active {
+      display: block;
+    }
+.footer-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-button a {
+  display: inline-block;
+  background-color: #2C3E50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.footer-button a:hover {
+  background-color: #1a2d3a;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Підтримка зусиль та наполегливості</h1>
+<p>Навчання — це безперервний процес, який часто потребує постійних зусиль і рішучості. Учні відрізняються за тим, що саме спонукає їх долати труднощі в навчанні, і ці чинники можуть змінюватися залежно від освітнього контексту. Щоб підтримувати наполегливість і зосередженість, ефективні моделі навчання створюють умови для формування значущих, чітко визначених цілей, забезпечують підтримку на шляху до їх досягнення, сприяють співпраці та формуванню відчуття приналежності, а також надають постійний, орієнтований на дію зворотний зв’язок. Такі зовнішні опори в навчальному середовищі допомагають як окремим учням, так і навчальним спільнотам залишатися залученими й мотивованими до досягнення освітніх результатів.</p>
+
+
+  <div class="subtitle" onclick="toggleExplanation(1)">
+  <div class="subtitle-header">Проясніть значення та призначення цілей (8.1)</div>
+  <div class="subtitle-subtext">Підкресліть мету та її важливість.</div>
+  </div>
+  <div id="explanation1" class="explanation">
+123
+  </div>
+
+
+  <div class="subtitle" onclick="toggleExplanation(2)">
+  <div class="subtitle-header">Оптимізуйте складність та підтримку (8.2)</div>
+  <div class="subtitle-subtext">Формуйте високі очікування, забезпечуючи гнучкі інструменти та підтримку.</div>
+  </div>
+  <div id="explanation2" class="explanation">
+123
+  </div>
+
+  <div class="subtitle" onclick="toggleExplanation(3)">
+  <div class="subtitle-header">Сприяйте співпраці, взаємозалежності та співнавчанню (8.3)</div>
+  <div class="subtitle-subtext">Навчайтеся один у одного та один з одним.</div>
+  </div>
+ <div id="explanation3" class="explanation"> 
+123 
+   </div>
+
+  <div class="subtitle" onclick="toggleExplanation(4)">
+  <div class="subtitle-header">Сприяйте приналежності та створенню спільноти (8.4)</div>
+  <div class="subtitle-subtext">Творіть середовища, у яких учнів цінують і куди їм хочеться повертатися.</div>
+  </div>
+  <div id="explanation4" class="explanation"> 
+123 
+   </div>
+
+  <div class="subtitle" onclick="toggleExplanation(5)">
+  <div class="subtitle-header">Пропонуйте зворотний зв'язок, орієнтований на дію (8.5)</div>
+  <div class="subtitle-subtext">Навчайте, підкреслюючи важливість зусиль і цінність процесу.</div>
+  </div>
+  <div id="explanation5" class="explanation"> 
+123 
+   </div>
+
+
+<div class="footer-button">
+  <a href="https://oksanapas.github.io/udl/udlua.html" target="_blank">Повернутись до рекомендацій</a>
+</div>
+<script>
+    let current = null;
+
+    function toggleExplanation(number) {
+      const selected = document.getElementById("explanation" + number);
+
+      if (current === number) {
+        selected.classList.remove("active");
+        current = null;
+      } else {
+        for (let i = 1; i <= 4; i++) {
+          document.getElementById("explanation" + i).classList.remove("active");
+        }
+        selected.classList.add("active");
+        current = number;
+      }
+    }
+  </script>
+
+</body>
+</html>

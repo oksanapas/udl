@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Універсальний дизайн для навчання</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: rgb(245, 250, 247);
+    }
+    .subtitle {
+      cursor: pointer;
+      background-color: rgb(173, 218, 190);
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+.subtitle-header {
+  background-color: rgb(173, 218, 190); /* Основний колір */
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+    .subtitle-header:hover {
+      background-color: rgb(155, 200, 175);
+    }
+.subtitle-subtext {
+  background-color: rgb(245, 250, 252); /* Світле тло */
+  padding: 8px 10px;
+  font-style: italic;
+  color: #2C3E50;
+border-radius: 5px;
+}
+    .explanation {
+      display: none;
+      margin: 10px 0 20px 20px;
+      padding: 10px;
+      background-color: #ffffff;
+      border-left: 4px solid rgb(122, 186, 155);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .active {
+      display: block;
+    }
+.footer-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-button a {
+  display: inline-block;
+  background-color: #2C3E50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.footer-button a:hover {
+  background-color: #1a2d3a;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Емоційна спроможність </h1>
+<p>Важливою складовою розвитку особистості є усвідомлення власних здібностей розпізнавати емоції, керувати думками й поведінкою, а також виявляти співчуття до інших. Емоційна реакція не суперечить раціональному мисленню — навпаки, емоції є невід’ємною частиною людського досвіду. Ефективне навчальне середовище сприяє розвитку внутрішніх ресурсів учнів: уміння регулювати емоції, усвідомлено реагувати на виклики й обирати шляхи подальшого руху в навчанні.</p>
+
+<p>Хоча багато людей здобувають ці уміння самостійно — через досвід, спостереження або метод спроб і помилок — інші потребують більшої та цілеспрямованої підтримки. На жаль, у багатьох навчальних середовищах розвиток таких умінь залишається в межах «неявного» навчального плану, що часто ускладнює доступ до них для значної частини учнів.</p>
+
+<p>Педагоги та середовища, які свідомо приділяють увагу емоційній компетентності, мають значно більше шансів успішно реалізувати принципи універсального дизайну навчання (UDL). Вони демонструють моделі поведінки, застосовують підказки, використовують різні підходи — усе це допомагає врахувати індивідуальні відмінності учнів, які завжди переважають над однорідністю. Ефективний підхід передбачає надання різноманітних варіантів підтримки, що відповідають потребам усіх. І хоча розвиток стратегій подолання труднощів є важливим для кожного, навчальне середовище не повинно змушувати учнів долати несправедливі бар’єри.</p>
+
+
+  <div class="subtitle" onclick="toggleExplanation(1)">
+  <div class="subtitle-header">Розпізнавайте різноманітність очікувань, переконань та мотивації (9.1)</div>
+  <div class="subtitle-subtext">Формулюйте цілі, що зміцнюють впевненість учнів і заохочують відповідальність за власне навчання.</div>
+  </div>
+  <div id="explanation1" class="explanation">
+123
+  </div>
+
+
+  <div class="subtitle" onclick="toggleExplanation(2)">
+  <div class="subtitle-header">Розвивайте усвідомлення себе та інших (9.2)</div>
+  <div class="subtitle-subtext">Формуйте та підтримуйте здорові емоційні реакції й конструктивні взаємодії.</div>
+  </div>
+  <div id="explanation2" class="explanation">
+123
+  </div>
+
+  <div class="subtitle" onclick="toggleExplanation(3)">
+  <div class="subtitle-header">Сприяйте індивідуальній та колективній рефлексії (9.3)</div>
+  <div class="subtitle-subtext">Сприяйте усвідомленню власного прогресу та вмінню вчитися на помилках.</div>
+  </div>
+  <div id="explanation3" class="explanation"> 
+123 
+   </div>
+
+  <div class="subtitle" onclick="toggleExplanation(4)">
+  <div class="subtitle-header">Розвивати емпатію та відновлювальні практики (9.4)</div>
+  <div class="subtitle-subtext">Навчайтеся на прикладі інших і долайте наслідки власних помилок.</div>
+  </div>
+  <div id="explanation4" class="explanation"> 
+123 
+  </div>
+
+
+
+<div class="footer-button">
+  <a href="https://oksanapas.github.io/udl/udlua.html" target="_blank">Повернутись до рекомендацій</a>
+</div>
+<script>
+    let current = null;
+
+    function toggleExplanation(number) {
+      const selected = document.getElementById("explanation" + number);
+
+      if (current === number) {
+        selected.classList.remove("active");
+        current = null;
+      } else {
+        for (let i = 1; i <= 4; i++) {
+          document.getElementById("explanation" + i).classList.remove("active");
+        }
+        selected.classList.add("active");
+        current = number;
+      }
+    }
+  </script>
+
+</body>
+</html>
